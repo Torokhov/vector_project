@@ -14,8 +14,13 @@ describe("Vector", function() {
   
   it("Разность векторов", function() {
     var vector = new Vector(1, 4);
-    vector = vector.minus(new Vector(1, 1))
+    vector = vector.minus(new Vector(1, 1));
     assert.equal(vector.x, 0);
     assert.equal(vector.y, 3);
+  });
+  
+   it("Длина вектора", function() {
+    var vector = new Vector(0, 4);
+    assert.equal(vector.length, 4);
   });
 });
