@@ -11,4 +11,11 @@ describe("Vector", function() {
     assert.equal(vector.x, 2);
     assert.equal(vector.y, 5);
   });
+  
+  it("Разность векторов", function() {
+    var vector = new Vector(1, 4);
+    vector = vector.minus(new Vector(1, 1))
+    assert.equal(vector.x, 0);
+    assert.equal(vector.y, 3);
+  });
 });
