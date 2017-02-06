@@ -1,6 +1,12 @@
 function Vector(x, y) {
   this.x = x;
   this.y = y;
+  
+  Object.defineProperty(this, "length", {
+    get: function() {
+      return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+  }); 
 }
 
 Vector.prototype.plus = function(vector) {
